@@ -1,0 +1,201 @@
+:root {
+    --main-color: #d3ad7f;
+    --white-color: #fff;
+    --black: #13131a;
+    --background: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+* {
+    transition: 0.2s linear;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    background-color: var(--background);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.6);;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.nav-bar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: var(--white-color);
+    &:hover {
+        color: var(--main-color);
+        border-bottom: 0.1rem solid var(--main-color);
+        padding-bottom: 0.5rem;
+        font-size: 1.9rem;
+    }
+}
+
+.icons {
+    background-color: var(--black);
+    padding: 0 0.5rem;
+    border-radius: 8px;
+}
+
+.icons i {
+    color: var(--white-color);
+    font-size: 20px;
+    margin: 1rem;
+    cursor: pointer;
+    &:hover {
+        color: var(--main-color);
+        border-bottom: 0.1rem solid var(--main-color);
+        padding-bottom: 0.5rem;
+    }
+}
+
+.home-container {
+    background: url("../img/home-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 63rem;
+}
+
+.content h3 {
+    color: var(--white-color);
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content p {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 1rem 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 3px;
+    &:hover {
+        opacity: 70%;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container {
+    display: grid;
+    /* se organizar sozinho , tamanho min e max */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(77, 77, 77);  
+    }
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #ff0000;
+    font-weight: 400;
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black);
+}
