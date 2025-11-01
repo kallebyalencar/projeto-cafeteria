@@ -78,6 +78,11 @@ section {
     }
 }
 
+.menu-mobile {
+    display: none;
+    color: var(--white-color);
+}
+
 .home-container {
     background: url("../img/home-img.jpg");
     background-position: center;
@@ -91,7 +96,7 @@ section {
 }
 
 .content {
-    max-width: 63rem;
+    width: 70%;
 }
 
 .content h3 {
