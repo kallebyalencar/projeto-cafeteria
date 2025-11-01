@@ -16,6 +16,7 @@
 body {
     background-color: var(--background);
     font-family: "Roboto", sans-serif;
+    width: 100%;
 }
 
 section {
@@ -26,11 +27,12 @@ section {
 
 .header {
     background-color: var(--background);
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    width: 100%;
     border-bottom: 0.1rem solid rgba(255, 255, 255, 0.6);;
 }
 
@@ -39,6 +41,10 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 0;
+}
+
+.nav-bar nav ul {
+    display: flex;
 }
 
 .nav-bar a {
@@ -156,7 +162,7 @@ section {
     line-height: 1.5;
 }
 
-.menu .box-container {
+.box-container {
     display: grid;
     /* se organizar sozinho , tamanho min e max */
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -169,7 +175,7 @@ section {
     padding: 5rem;
     cursor: pointer;
     &:hover {
-        background-color: rgb(77, 77, 77);  
+        background-color: rgb(126, 126, 126);  
     }
 }
 
@@ -199,3 +205,82 @@ section {
 .menu .box-container .box:hover>* {
     color: var(--black);
 }
+
+.review .box-container .box {
+    border: var(--border);
+    padding: 3rem 3rem 0.5rem 3rem;
+    text-align: center;
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--white-color);
+    padding: 2rem 0;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.review .box-container .box h3 {
+    color: var(--white-color);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.review .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+
+}
+
+.review .box .stars {
+    font-size: 22px;
+    color: var(--white-color);
+    padding-top: 10px;
+}
+
+.review .box .stars-full {
+    font-size: 22px;
+    color: var(--white-color);
+    padding: 10px 0 1px 0;
+    border-bottom: var(--border);
+    &:hover {
+        color: yellow;
+        border-bottom: 8px solid yellow;
+        transform: translateY(-3px);
+    }
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.address iframe {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+footer .share {
+    padding: 1rem 0;
+    font-size: 24px;
+    color: white;
+}
+
+footer .share i {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+    &:hover {
+        color: var(--main-color);
+        font-size: 28px;
+    }
+}
+
+
